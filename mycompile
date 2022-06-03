@@ -1,0 +1,1 @@
+gcc -Wall -O3 -I/home/gobiz/gobiz_app/include/mysql -L/home/gobiz/gobiz_app/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm gobiz.c readfile.c Int2long.c myerror.c handlesock.c strhnd.c protocol.c fcs.c sqlfunction.c sqlaccount.c sqlmaterial.c sqlpartners.c execstoreproc.c -o gobizd

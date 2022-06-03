@@ -1,0 +1,145 @@
+Command: ./gobizd no_proc
+
+== 0 ===========================
+Heap allocation functions accounted for 95.8% of measured spacetime
+
+Called from:
+  71.7% : 0x7CA61C: my_malloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+  15.2% : 0x7D1515: my_once_alloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+   6.3% : 0x8049B38: UserMainProcess (gobiz.c:318)
+
+   0.6% : 0x1E0B4B: getservbyname (in /lib/libc-2.4.so)
+
+  and 37 other insignificant places
+
+== 1 ===========================
+Context accounted for 71.7% of measured spacetime
+  0x7CA61C: my_malloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+  53.5% : 0x7CD7C9: alloc_root (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+  11.5% : 0x7F3023: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+   5.7% : 0x7F5087: my_net_init (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+   0.5% : 0x7EF51E: mysql_init (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+  and 7 other insignificant places
+
+---------------------------------
+Context accounted for 15.2% of measured spacetime
+  0x7D1515: my_once_alloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+   6.7% : 0x7D1C1A: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+   5.0% : 0x7D1C3C: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+   1.6% : 0x7D1626: my_once_strdup (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+   1.6% : 0x7D230A: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+---------------------------------
+Context accounted for  6.3% of measured spacetime
+  0x8049B38: UserMainProcess (gobiz.c:318)
+
+Called from:
+   6.3% : 0x804977A: StartMyServer (gobiz.c:175)
+
+---------------------------------
+Context accounted for  0.6% of measured spacetime
+  0x1E0B4B: getservbyname (in /lib/libc-2.4.so)
+
+Called from:
+   0.6% : 0x7C6704: mysql_server_init (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+== 2 ===========================
+Context accounted for 53.5% of measured spacetime
+  0x7CA61C: my_malloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+  0x7CD7C9: alloc_root (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+  49.4% : 0x7EEBD5: cli_read_rows (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+   3.2% : 0x7EEBB5: cli_read_rows (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+   0.8% : 0x7EEE52: unpack_fields (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+---------------------------------
+Context accounted for 11.5% of measured spacetime
+  0x7CA61C: my_malloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+  0x7F3023: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+  11.5% : 0x7F3120: vio_new (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+---------------------------------
+Context accounted for  5.7% of measured spacetime
+  0x7CA61C: my_malloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+  0x7F5087: my_net_init (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+   5.7% : 0x7EFC30: mysql_real_connect (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+---------------------------------
+Context accounted for  0.5% of measured spacetime
+  0x7CA61C: my_malloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+  0x7EF51E: mysql_init (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+   0.5% : 0x804A339: UserMainProcess (gobiz.c:456)
+
+---------------------------------
+Context accounted for  6.7% of measured spacetime
+  0x7D1515: my_once_alloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+  0x7D1C1A: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+   6.7% : 0x7D2651: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+---------------------------------
+Context accounted for  5.0% of measured spacetime
+  0x7D1515: my_once_alloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+  0x7D1C3C: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+   5.0% : 0x7D2651: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+---------------------------------
+Context accounted for  1.6% of measured spacetime
+  0x7D1515: my_once_alloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+  0x7D1626: my_once_strdup (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+   1.6% : 0x7D2086: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+---------------------------------
+Context accounted for  1.6% of measured spacetime
+  0x7D1515: my_once_alloc (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+  0x7D230A: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+   1.6% : 0x7DAC94: (within /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+---------------------------------
+Context accounted for  6.3% of measured spacetime
+  0x8049B38: UserMainProcess (gobiz.c:318)
+  0x804977A: StartMyServer (gobiz.c:175)
+
+Called from:
+   6.3% : 0x80493F5: main (gobiz.c:34)
+
+---------------------------------
+Context accounted for  0.6% of measured spacetime
+  0x1E0B4B: getservbyname (in /lib/libc-2.4.so)
+  0x7C6704: mysql_server_init (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+Called from:
+   0.6% : 0x7EF461: mysql_init (in /usr/lib/mysql/libmysqlclient.so.15.0.0)
+
+=================================
+
+End of information.  Rerun with a bigger --depth value for more.
